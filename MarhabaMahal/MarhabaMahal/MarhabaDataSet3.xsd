@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MarhabaDataSet3" targetNamespace="http://tempuri.org/MarhabaDataSet3.xsd" xmlns:mstns="http://tempuri.org/MarhabaDataSet3.xsd" xmlns="http://tempuri.org/MarhabaDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MarhabaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MarhabaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MarhabaMahal.Properties.Settings.GlobalReference.Default.MarhabaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItemClosingViewTableAdapter" GeneratorDataComponentClassName="ItemClosingViewTableAdapter" Name="ItemClosingView" UserDataComponentName="ItemClosingViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MarhabaConnectionString (Settings)" DbObjectName="Marhaba.dbo.ItemClosingView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [ITEM NAME], [TOTAL SALE] FROM dbo.ItemClosingView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ITEM NAME" DataSetColumn="ITEM NAME" />
+              <Mapping SourceColumn="TOTAL SALE" DataSetColumn="TOTAL SALE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MarhabaDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MarhabaDataSet3" msprop:Generator_UserDSName="MarhabaDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ItemClosingView" msprop:Generator_TableClassName="ItemClosingViewDataTable" msprop:Generator_TableVarName="tableItemClosingView" msprop:Generator_TablePropName="ItemClosingView" msprop:Generator_RowDeletingName="ItemClosingViewRowDeleting" msprop:Generator_RowChangingName="ItemClosingViewRowChanging" msprop:Generator_RowEvHandlerName="ItemClosingViewRowChangeEventHandler" msprop:Generator_RowDeletedName="ItemClosingViewRowDeleted" msprop:Generator_UserTableName="ItemClosingView" msprop:Generator_RowChangedName="ItemClosingViewRowChanged" msprop:Generator_RowEvArgName="ItemClosingViewRowChangeEvent" msprop:Generator_RowClassName="ItemClosingViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEM_x0020_NAME" msprop:Generator_ColumnVarNameInTable="columnITEM_NAME" msprop:Generator_ColumnPropNameInRow="ITEM_NAME" msprop:Generator_ColumnPropNameInTable="ITEM_NAMEColumn" msprop:Generator_UserColumnName="ITEM NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOTAL_x0020_SALE" msprop:Generator_ColumnVarNameInTable="columnTOTAL_SALE" msprop:Generator_ColumnPropNameInRow="TOTAL_SALE" msprop:Generator_ColumnPropNameInTable="TOTAL_SALEColumn" msprop:Generator_UserColumnName="TOTAL SALE" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

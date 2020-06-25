@@ -1,0 +1,173 @@
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\Images\logo-s.png
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.exe.config
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.exe.manifest
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.application
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.exe
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.pdb
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.SqlServer.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaDatabase.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.SqlServer.Types.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaDatabase.pdb
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.xml
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.SqlServer.xml
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csprojResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CRQUERYENGINE.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalAnalysisCommLayerLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalAnalysisCommonControlsLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalAnalysisRequestModelLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalAnalysisXmlSerializeLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalClientDocLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalDocMgmtUndoManagerLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalPrintControlLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalReportsCommonObjectModelLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalReportsControllersLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalReportsCubeDefModelLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalReportsDataDefModelLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalReportsDTSAgentLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalReportsLocalConnectionMgrLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalReportsObjectFactoryLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.CrystalReportsReportDefModelLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.PAGEOBJECTMODELLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.PROMPTINGLib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Interop.SAXSERIALIZELib.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csproj.ResolveComReference.cache
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Add_Items.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.AdminDashboard.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.BillForm.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ChangePassword.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.DeliveryPanel.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ItemsPanel.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Login.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Properties.Resources.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ManageSales.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Register.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.OrdersPanel.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ReportsPanel.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.UserDailyReportPanel.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.UserDashboard.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.UserManagement.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csproj.GenerateResource.Cache
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\RdlCompile.cache
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\RdlCompile.compiled
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.TrustInfo.xml
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.exe.manifest
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.application
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.exe
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.pdb
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ItemsReportDaily.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.TableSwap.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.TaxData.resources
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\Newtonsoft.Json.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\Newtonsoft.Json.xml
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\MarhabaMahal\bin\Release\Images\pra.bmp
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\Images\logo-s.png
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\Images\pra.bmp
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.exe.config
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.exe.manifest
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.application
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.exe
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.pdb
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.SqlServer.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaDatabase.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.ReportViewer.Common.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.ReportViewer.WinForms.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\Newtonsoft.Json.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaDatabase.pdb
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaDatabase.dll.config
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.xml
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.SqlServer.xml
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\bin\Release\Newtonsoft.Json.xml
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csprojAssemblyReference.cache
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csproj.ResolveComReference.cache
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Add_Items.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.AdminDashboard.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.BillForm.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ChangePassword.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.DeliveryPanel.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ItemsPanel.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ItemsReportDaily.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Login.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Properties.Resources.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ManageSales.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Register.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.OrdersPanel.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ReportsPanel.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.TableSwap.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.TaxData.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.UserDailyReportPanel.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.UserDashboard.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.UserManagement.resources
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csproj.GenerateResource.cache
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csproj.CoreCompileInputs.cache
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.TrustInfo.xml
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.exe.manifest
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.application
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csproj.CopyComplete
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.exe
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.pdb
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\Images\logo-s.png
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\Images\pra.bmp
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.exe.config
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.exe.manifest
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.application
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.exe
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaMahal.pdb
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.SqlServer.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaDatabase.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.ReportViewer.Common.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.ReportViewer.WinForms.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\Microsoft.SqlServer.Types.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\Newtonsoft.Json.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaDatabase.pdb
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\MarhabaDatabase.dll.config
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.xml
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\EntityFramework.SqlServer.xml
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\Newtonsoft.Json.xml
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\de\Microsoft.SqlServer.Types.resources.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\es\Microsoft.SqlServer.Types.resources.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\fr\Microsoft.SqlServer.Types.resources.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\it\Microsoft.SqlServer.Types.resources.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\ja\Microsoft.SqlServer.Types.resources.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\ko\Microsoft.SqlServer.Types.resources.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\pt\Microsoft.SqlServer.Types.resources.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\ru\Microsoft.SqlServer.Types.resources.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\bin\Release\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csprojAssemblyReference.cache
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csproj.ResolveComReference.cache
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Add_Items.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.AdminDashboard.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.BillForm.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ChangeId.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.IdPassword.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ChangePassword.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.DeliveryPanel.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ItemsPanel.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ItemsReportDaily.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Login.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Properties.Resources.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ManageSales.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Register.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.OrdersPanel.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.ReportsPanel.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.TableSwap.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.TaxData.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.UserDailyReportPanel.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.UserDashboard.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.Views.UserManagement.resources
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csproj.GenerateResource.cache
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csproj.CoreCompileInputs.cache
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.TrustInfo.xml
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.exe.manifest
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.application
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\Marhaba.csproj.CopyComplete
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.exe
+E:\Work\Marhaba Mahal\MarhabaMahal\MarhabaMahal\obj\Release\MarhabaMahal.pdb

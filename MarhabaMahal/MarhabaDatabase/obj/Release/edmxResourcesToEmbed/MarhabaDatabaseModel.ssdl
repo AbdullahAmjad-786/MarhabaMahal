@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MarhabaDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="bill_id" />
+    </Key>
+    <Property Name="bill_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bill_code" Type="varchar(max)" Nullable="false" />
+    <Property Name="bill_date" Type="smalldatetime" Nullable="false" />
+    <Property Name="total_bill" Type="float" Nullable="false" />
+    <Property Name="user_name" Type="varchar(max)" Nullable="false" />
+    <Property Name="table_no" Type="varchar(max)" />
+    <Property Name="type" Type="varchar(max)" />
+    <Property Name="timestamp" Type="datetime" />
+    <Property Name="customer_phone" Type="varchar(max)" />
+    <Property Name="payment_type" Type="bit" />
+    <Property Name="payed" Type="bit" />
+    <Property Name="totalWithoutGST" Type="float" />
+  </EntityType>
+  <EntityType Name="bill_item">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bill_id" Type="varchar(max)" Nullable="false" />
+    <Property Name="item_code" Type="varchar(max)" Nullable="false" />
+    <Property Name="item_qty" Type="float" Nullable="false" />
+    <Property Name="total_bill" Type="float" Nullable="false" />
+    <Property Name="type" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="closing">
+    <Key>
+      <PropertyRef Name="bill_id" />
+    </Key>
+    <Property Name="bill_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bill_code" Type="varchar(max)" Nullable="false" />
+    <Property Name="bill_date" Type="smalldatetime" Nullable="false" />
+    <Property Name="total_bill" Type="float" Nullable="false" />
+    <Property Name="user_name" Type="varchar(max)" Nullable="false" />
+    <Property Name="table_no" Type="varchar(max)" />
+    <Property Name="type" Type="varchar(max)" />
+    <Property Name="timestamp" Type="datetime" />
+    <Property Name="customer_phone" Type="varchar(max)" />
+    <Property Name="payment_type" Type="bit" />
+  </EntityType>
+  <EntityType Name="configurations">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="gst" Type="float" />
+    <Property Name="last_id_synced" Type="int" />
+    <Property Name="ntn" Type="varchar(max)" />
+    <Property Name="branchCode" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="phone" Type="varchar(max)" Nullable="false" />
+    <Property Name="address" Type="varchar(max)" />
+    <Property Name="email" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="item">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="item_id" Type="varchar(max)" Nullable="false" />
+    <Property Name="item_name" Type="varchar(max)" Nullable="false" />
+    <Property Name="item_price" Type="float" Nullable="false" />
+    <Property Name="item_qty" Type="varchar(max)" />
+    <Property Name="item_type" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pending_deliveries">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="item_code" Type="varchar(max)" Nullable="false" />
+    <Property Name="qty" Type="float" Nullable="false" />
+    <Property Name="item_total" Type="float" Nullable="false" />
+    <Property Name="username" Type="varchar(max)" Nullable="false" />
+    <Property Name="phone_number" Type="varchar(max)" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="address" Type="text" />
+    <Property Name="order_id" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pending_order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="item_code" Type="varchar(max)" Nullable="false" />
+    <Property Name="qty" Type="float" Nullable="false" />
+    <Property Name="item_total" Type="float" Nullable="false" />
+    <Property Name="username" Type="varchar(max)" Nullable="false" />
+    <Property Name="table_number" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pending_payment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tables" Type="varchar(max)" Nullable="false" />
+    <Property Name="total_bill" Type="float" Nullable="false" />
+    <Property Name="bill_id" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="reservations">
+    <Key>
+      <PropertyRef Name="table_no" />
+    </Key>
+    <Property Name="table_no" Type="int" Nullable="false" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="persons" Type="int" Nullable="false" />
+    <Property Name="incoming_time" Type="datetime" Nullable="false" />
+    <Property Name="outgoing_time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="table_name" Type="varchar(max)" Nullable="false" />
+    <Property Name="table_seats" Type="int" />
+  </EntityType>
+  <EntityType Name="user_info">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" Nullable="false" />
+    <Property Name="user_name" Type="varchar(max)" Nullable="false" />
+    <Property Name="type" Type="bit" Nullable="false" />
+    <Property Name="password" Type="varchar(max)" Nullable="false" />
+    <Property Name="ph_no" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="closing_view">
+    <Key>
+      <PropertyRef Name="bill_id" />
+      <PropertyRef Name="bill_code" />
+      <PropertyRef Name="bill_date" />
+      <PropertyRef Name="total_bill" />
+      <PropertyRef Name="user_name" />
+    </Key>
+    <Property Name="bill_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bill_code" Type="varchar(max)" Nullable="false" />
+    <Property Name="bill_date" Type="smalldatetime" Nullable="false" />
+    <Property Name="total_bill" Type="float" Nullable="false" />
+    <Property Name="user_name" Type="varchar(max)" Nullable="false" />
+    <Property Name="table_no" Type="varchar(max)" />
+    <Property Name="type" Type="varchar(max)" />
+    <Property Name="timestamp" Type="datetime" />
+    <Property Name="customer_phone" Type="varchar(max)" />
+    <Property Name="payment_type" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="MarhabaDbModelStoreContainer">
+    <EntitySet Name="bill" EntityType="Self.bill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bill_item" EntityType="Self.bill_item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="closing" EntityType="Self.closing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="configurations" EntityType="Self.configurations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="item" EntityType="Self.item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pending_deliveries" EntityType="Self.pending_deliveries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pending_order" EntityType="Self.pending_order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pending_payment" EntityType="Self.pending_payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reservations" EntityType="Self.reservations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="table" EntityType="Self.table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_info" EntityType="Self.user_info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="closing_view" EntityType="Self.closing_view" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [closing_view].[bill_id] AS [bill_id], 
+    [closing_view].[bill_code] AS [bill_code], 
+    [closing_view].[bill_date] AS [bill_date], 
+    [closing_view].[total_bill] AS [total_bill], 
+    [closing_view].[user_name] AS [user_name], 
+    [closing_view].[table_no] AS [table_no], 
+    [closing_view].[type] AS [type], 
+    [closing_view].[timestamp] AS [timestamp], 
+    [closing_view].[customer_phone] AS [customer_phone], 
+    [closing_view].[payment_type] AS [payment_type]
+    FROM [dbo].[closing_view] AS [closing_view]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MarhabaDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MarhabaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="reservations" EntityType="MarhabaDbModel.reservation" />
+    <EntitySet Name="sysdiagrams" EntityType="MarhabaDbModel.sysdiagram" />
+    <EntitySet Name="tables" EntityType="MarhabaDbModel.table" />
+    <EntitySet Name="customers" EntityType="MarhabaDbModel.customer" />
+    <EntitySet Name="items" EntityType="MarhabaDbModel.item" />
+    <EntitySet Name="user_info" EntityType="MarhabaDbModel.user_info" />
+    <EntitySet Name="pending_order" EntityType="MarhabaDbModel.pending_order" />
+    <EntitySet Name="pending_deliveries" EntityType="MarhabaDbModel.pending_deliveries" />
+    <EntitySet Name="bill_item" EntityType="MarhabaDbModel.bill_item" />
+    <EntitySet Name="closings" EntityType="MarhabaDbModel.closing" />
+    <EntitySet Name="closing_view" EntityType="MarhabaDbModel.closing_view" />
+    <EntitySet Name="pending_payment" EntityType="MarhabaDbModel.pending_payment" />
+    <EntitySet Name="configurations" EntityType="MarhabaDbModel.configuration" />
+    <EntitySet Name="bills" EntityType="MarhabaDbModel.bill" />
+  </EntityContainer>
+  <EntityType Name="reservation">
+    <Key>
+      <PropertyRef Name="table_no" />
+    </Key>
+    <Property Name="table_no" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="persons" Type="Int32" Nullable="false" />
+    <Property Name="incoming_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="outgoing_time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="table_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="table_seats" Type="Int32" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="item">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="item_id" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="item_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="item_price" Type="Double" Nullable="false" />
+    <Property Name="item_qty" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="item_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="user_info">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="user_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="Boolean" Nullable="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ph_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pending_order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="item_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="qty" Type="Double" Nullable="false" />
+    <Property Name="item_total" Type="Double" Nullable="false" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="table_number" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pending_deliveries">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="item_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="qty" Type="Double" Nullable="false" />
+    <Property Name="item_total" Type="Double" Nullable="false" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="phone_number" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="order_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="bill_item">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bill_id" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="item_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="item_qty" Type="Double" Nullable="false" />
+    <Property Name="total_bill" Type="Double" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="closing">
+    <Key>
+      <PropertyRef Name="bill_id" />
+    </Key>
+    <Property Name="bill_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bill_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="bill_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="total_bill" Type="Double" Nullable="false" />
+    <Property Name="user_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="table_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="timestamp" Type="DateTime" Precision="3" />
+    <Property Name="customer_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="payment_type" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="closing_view">
+    <Key>
+      <PropertyRef Name="bill_id" />
+      <PropertyRef Name="bill_code" />
+      <PropertyRef Name="bill_date" />
+      <PropertyRef Name="total_bill" />
+      <PropertyRef Name="user_name" />
+    </Key>
+    <Property Name="bill_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bill_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="bill_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="total_bill" Type="Double" Nullable="false" />
+    <Property Name="user_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="table_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="timestamp" Type="DateTime" Precision="3" />
+    <Property Name="customer_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="payment_type" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="pending_payment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tables" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="total_bill" Type="Double" Nullable="false" />
+    <Property Name="bill_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="configuration">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="gst" Type="Double" />
+    <Property Name="last_id_synced" Type="Int32" />
+    <Property Name="ntn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="branchCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="bill_id" />
+    </Key>
+    <Property Name="bill_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bill_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="bill_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="total_bill" Type="Double" Nullable="false" />
+    <Property Name="user_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="table_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="timestamp" Type="DateTime" Precision="3" />
+    <Property Name="customer_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="payment_type" Type="Boolean" />
+    <Property Name="payed" Type="Boolean" />
+    <Property Name="totalWithoutGST" Type="Double" />
+  </EntityType>
+</Schema>

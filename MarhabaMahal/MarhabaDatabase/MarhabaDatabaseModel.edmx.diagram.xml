@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="56e1f79776cd4ed6a076dfc2108b1cb0" Name="Diagram1">
+        <EntityTypeShape EntityType="MarhabaDbModel.reservation" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.sysdiagram" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.table" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.customer" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.item" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.user_info" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.pending_order" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.pending_deliveries" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.bill_item" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.closing" Width="1.5" PointX="5.375" PointY="9.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.closing_view" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.pending_payment" Width="1.5" PointX="9.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.configuration" Width="1.5" PointX="7.375" PointY="10.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.bill" Width="1.5" PointX="9.375" PointY="10.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

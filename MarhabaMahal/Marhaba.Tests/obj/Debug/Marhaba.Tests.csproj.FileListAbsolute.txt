@@ -1,0 +1,51 @@
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Images\logo-s.png
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Marhaba.Tests.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Marhaba.Tests.pdb
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\MarhabaDatabase.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\MarhabaMahal.exe
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.Pex.Framework.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\EntityFramework.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.ExtendedReflection.Reasoning.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.ExtendedReflection.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\MarhabaDatabase.pdb
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\MarhabaMahal.pdb
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.Pex.Framework.xml
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\EntityFramework.xml
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\obj\Debug\Marhaba.Tests.csprojResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\obj\Debug\Marhaba.Tests.dll
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\obj\Debug\Marhaba.Tests.pdb
+D:\My Documents\Visual Studio 2015\Projects\MarhabaMahal\Marhaba.Tests\bin\Debug\Images\pra.bmp
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Images\logo-s.png
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Images\pra.bmp
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Marhaba.Tests.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Marhaba.Tests.pdb
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\MarhabaDatabase.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\MarhabaMahal.exe
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.ExtendedReflection.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.Pex.Framework.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\EntityFramework.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Newtonsoft.Json.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.ExtendedReflection.Reasoning.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.ReportViewer.Common.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\MarhabaDatabase.pdb
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\MarhabaDatabase.dll.config
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\MarhabaMahal.pdb
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\MarhabaMahal.exe.config
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Microsoft.Pex.Framework.xml
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\EntityFramework.xml
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\bin\Debug\Newtonsoft.Json.xml
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\obj\Debug\Marhaba.Tests.csprojAssemblyReference.cache
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\obj\Debug\Marhaba.Tests.csproj.CoreCompileInputs.cache
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\obj\Debug\Marhaba.Tests.csproj.CopyComplete
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\obj\Debug\Marhaba.Tests.dll
+K:\Personal Projects\MarhabaMahal\MarhabaMahal\Marhaba.Tests\obj\Debug\Marhaba.Tests.pdb

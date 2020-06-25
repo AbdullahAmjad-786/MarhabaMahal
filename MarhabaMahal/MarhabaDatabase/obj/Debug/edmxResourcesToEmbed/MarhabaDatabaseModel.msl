@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MarhabaDbModelStoreContainer" CdmEntityContainer="MarhabaEntities">
+    <EntitySetMapping Name="reservations">
+      <EntityTypeMapping TypeName="MarhabaDbModel.reservation">
+        <MappingFragment StoreEntitySet="reservations">
+          <ScalarProperty Name="outgoing_time" ColumnName="outgoing_time" />
+          <ScalarProperty Name="incoming_time" ColumnName="incoming_time" />
+          <ScalarProperty Name="persons" ColumnName="persons" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="table_no" ColumnName="table_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tables">
+      <EntityTypeMapping TypeName="MarhabaDbModel.table">
+        <MappingFragment StoreEntitySet="table">
+          <ScalarProperty Name="table_seats" ColumnName="table_seats" />
+          <ScalarProperty Name="table_name" ColumnName="table_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="MarhabaDbModel.customer">
+        <MappingFragment StoreEntitySet="customers">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="items">
+      <EntityTypeMapping TypeName="MarhabaDbModel.item">
+        <MappingFragment StoreEntitySet="item">
+          <ScalarProperty Name="item_type" ColumnName="item_type" />
+          <ScalarProperty Name="item_qty" ColumnName="item_qty" />
+          <ScalarProperty Name="item_price" ColumnName="item_price" />
+          <ScalarProperty Name="item_name" ColumnName="item_name" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_info">
+      <EntityTypeMapping TypeName="MarhabaDbModel.user_info">
+        <MappingFragment StoreEntitySet="user_info">
+          <ScalarProperty Name="ph_no" ColumnName="ph_no" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pending_order">
+      <EntityTypeMapping TypeName="MarhabaDbModel.pending_order">
+        <MappingFragment StoreEntitySet="pending_order">
+          <ScalarProperty Name="table_number" ColumnName="table_number" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="item_total" ColumnName="item_total" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="item_code" ColumnName="item_code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pending_deliveries">
+      <EntityTypeMapping TypeName="MarhabaDbModel.pending_deliveries">
+        <MappingFragment StoreEntitySet="pending_deliveries">
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="item_total" ColumnName="item_total" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="item_code" ColumnName="item_code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bill_item">
+      <EntityTypeMapping TypeName="MarhabaDbModel.bill_item">
+        <MappingFragment StoreEntitySet="bill_item">
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="total_bill" ColumnName="total_bill" />
+          <ScalarProperty Name="item_qty" ColumnName="item_qty" />
+          <ScalarProperty Name="item_code" ColumnName="item_code" />
+          <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="closings">
+      <EntityTypeMapping TypeName="MarhabaDbModel.closing">
+        <MappingFragment StoreEntitySet="closing">
+          <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+          <ScalarProperty Name="customer_phone" ColumnName="customer_phone" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="table_no" ColumnName="table_no" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="total_bill" ColumnName="total_bill" />
+          <ScalarProperty Name="bill_date" ColumnName="bill_date" />
+          <ScalarProperty Name="bill_code" ColumnName="bill_code" />
+          <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="closing_view">
+      <EntityTypeMapping TypeName="MarhabaDbModel.closing_view">
+        <MappingFragment StoreEntitySet="closing_view">
+          <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+          <ScalarProperty Name="customer_phone" ColumnName="customer_phone" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="table_no" ColumnName="table_no" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="total_bill" ColumnName="total_bill" />
+          <ScalarProperty Name="bill_date" ColumnName="bill_date" />
+          <ScalarProperty Name="bill_code" ColumnName="bill_code" />
+          <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pending_payment">
+      <EntityTypeMapping TypeName="MarhabaDbModel.pending_payment">
+        <MappingFragment StoreEntitySet="pending_payment">
+          <ScalarProperty Name="gst" ColumnName="gst" />
+          <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+          <ScalarProperty Name="total_bill" ColumnName="total_bill" />
+          <ScalarProperty Name="tables" ColumnName="tables" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="configurations">
+      <EntityTypeMapping TypeName="MarhabaDbModel.configuration">
+        <MappingFragment StoreEntitySet="configurations">
+          <ScalarProperty Name="branchCode" ColumnName="branchCode" />
+          <ScalarProperty Name="ntn" ColumnName="ntn" />
+          <ScalarProperty Name="last_id_synced" ColumnName="last_id_synced" />
+          <ScalarProperty Name="gst" ColumnName="gst" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bills">
+      <EntityTypeMapping TypeName="MarhabaDbModel.bill">
+        <MappingFragment StoreEntitySet="bill">
+          <ScalarProperty Name="totalWithoutGST" ColumnName="totalWithoutGST" />
+          <ScalarProperty Name="payed" ColumnName="payed" />
+          <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+          <ScalarProperty Name="customer_phone" ColumnName="customer_phone" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="table_no" ColumnName="table_no" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="total_bill" ColumnName="total_bill" />
+          <ScalarProperty Name="bill_date" ColumnName="bill_date" />
+          <ScalarProperty Name="bill_code" ColumnName="bill_code" />
+          <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcp_settings">
+      <EntityTypeMapping TypeName="MarhabaDbModel.tcp_settings">
+        <MappingFragment StoreEntitySet="tcp_settings">
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

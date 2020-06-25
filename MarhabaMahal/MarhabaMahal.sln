@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marhaba", "MarhabaMahal\Marhaba.csproj", "{5989D4D1-6F01-4017-AB6F-3DCED53E419B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarhabaDatabase", "MarhabaDatabase\MarhabaDatabase.csproj", "{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MarhabaMahalSetup", "MarhabaMahalSetup\MarhabaMahalSetup.vdproj", "{B0E02FD9-6BA5-4510-B54D-6E4809B2106F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marhaba.Tests", "Marhaba.Tests\Marhaba.Tests.csproj", "{D910E93B-202E-4721-85A2-DEF14C5F8E08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5989D4D1-6F01-4017-AB6F-3DCED53E419B}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{5989D4D1-6F01-4017-AB6F-3DCED53E419B}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{5989D4D1-6F01-4017-AB6F-3DCED53E419B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5989D4D1-6F01-4017-AB6F-3DCED53E419B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5989D4D1-6F01-4017-AB6F-3DCED53E419B}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{5989D4D1-6F01-4017-AB6F-3DCED53E419B}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{5989D4D1-6F01-4017-AB6F-3DCED53E419B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5989D4D1-6F01-4017-AB6F-3DCED53E419B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5989D4D1-6F01-4017-AB6F-3DCED53E419B}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{5989D4D1-6F01-4017-AB6F-3DCED53E419B}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{CF491E4F-F1D1-4386-8B6C-4295FC4E150C}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{B0E02FD9-6BA5-4510-B54D-6E4809B2106F}.CD_ROM|Any CPU.ActiveCfg = Release
+		{B0E02FD9-6BA5-4510-B54D-6E4809B2106F}.Debug|Any CPU.ActiveCfg = Debug
+		{B0E02FD9-6BA5-4510-B54D-6E4809B2106F}.DVD-5|Any CPU.ActiveCfg = Debug
+		{B0E02FD9-6BA5-4510-B54D-6E4809B2106F}.Release|Any CPU.ActiveCfg = Release
+		{B0E02FD9-6BA5-4510-B54D-6E4809B2106F}.SingleImage|Any CPU.ActiveCfg = Release
+		{D910E93B-202E-4721-85A2-DEF14C5F8E08}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{D910E93B-202E-4721-85A2-DEF14C5F8E08}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{D910E93B-202E-4721-85A2-DEF14C5F8E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D910E93B-202E-4721-85A2-DEF14C5F8E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D910E93B-202E-4721-85A2-DEF14C5F8E08}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{D910E93B-202E-4721-85A2-DEF14C5F8E08}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{D910E93B-202E-4721-85A2-DEF14C5F8E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D910E93B-202E-4721-85A2-DEF14C5F8E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D910E93B-202E-4721-85A2-DEF14C5F8E08}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{D910E93B-202E-4721-85A2-DEF14C5F8E08}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

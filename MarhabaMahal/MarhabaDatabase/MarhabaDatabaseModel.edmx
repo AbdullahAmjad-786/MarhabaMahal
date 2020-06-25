@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MarhabaDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="bill">
+          <Key>
+            <PropertyRef Name="bill_id" />
+          </Key>
+          <Property Name="bill_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bill_code" Type="varchar(max)" Nullable="false" />
+          <Property Name="bill_date" Type="smalldatetime" Nullable="false" />
+          <Property Name="total_bill" Type="float" Nullable="false" />
+          <Property Name="user_name" Type="varchar(max)" Nullable="false" />
+          <Property Name="table_no" Type="varchar(max)" />
+          <Property Name="type" Type="varchar(max)" />
+          <Property Name="timestamp" Type="datetime" />
+          <Property Name="customer_phone" Type="varchar(max)" />
+          <Property Name="payment_type" Type="bit" />
+          <Property Name="payed" Type="bit" />
+          <Property Name="totalWithoutGST" Type="float" />
+        </EntityType>
+        <EntityType Name="bill_item">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bill_id" Type="varchar(max)" Nullable="false" />
+          <Property Name="item_code" Type="varchar(max)" Nullable="false" />
+          <Property Name="item_qty" Type="float" Nullable="false" />
+          <Property Name="total_bill" Type="float" Nullable="false" />
+          <Property Name="type" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="closing">
+          <Key>
+            <PropertyRef Name="bill_id" />
+          </Key>
+          <Property Name="bill_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bill_code" Type="varchar(max)" Nullable="false" />
+          <Property Name="bill_date" Type="smalldatetime" Nullable="false" />
+          <Property Name="total_bill" Type="float" Nullable="false" />
+          <Property Name="user_name" Type="varchar(max)" Nullable="false" />
+          <Property Name="table_no" Type="varchar(max)" />
+          <Property Name="type" Type="varchar(max)" />
+          <Property Name="timestamp" Type="datetime" />
+          <Property Name="customer_phone" Type="varchar(max)" />
+          <Property Name="payment_type" Type="bit" />
+        </EntityType>
+        <EntityType Name="configurations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="gst" Type="float" />
+          <Property Name="last_id_synced" Type="int" />
+          <Property Name="ntn" Type="varchar(max)" />
+          <Property Name="branchCode" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="customers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar(max)" />
+          <Property Name="phone" Type="varchar(max)" Nullable="false" />
+          <Property Name="address" Type="varchar(max)" />
+          <Property Name="email" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="item">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="item_id" Type="varchar(max)" Nullable="false" />
+          <Property Name="item_name" Type="varchar(max)" Nullable="false" />
+          <Property Name="item_price" Type="float" Nullable="false" />
+          <Property Name="item_qty" Type="varchar(max)" />
+          <Property Name="item_type" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="pending_deliveries">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="item_code" Type="varchar(max)" Nullable="false" />
+          <Property Name="qty" Type="float" Nullable="false" />
+          <Property Name="item_total" Type="float" Nullable="false" />
+          <Property Name="username" Type="varchar(max)" Nullable="false" />
+          <Property Name="phone_number" Type="varchar(max)" Nullable="false" />
+          <Property Name="name" Type="varchar(max)" />
+          <Property Name="address" Type="text" />
+          <Property Name="order_id" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="pending_order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="item_code" Type="varchar(max)" Nullable="false" />
+          <Property Name="qty" Type="float" Nullable="false" />
+          <Property Name="item_total" Type="float" Nullable="false" />
+          <Property Name="username" Type="varchar(max)" Nullable="false" />
+          <Property Name="table_number" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pending_payment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tables" Type="varchar(max)" Nullable="false" />
+          <Property Name="total_bill" Type="float" Nullable="false" />
+          <Property Name="bill_id" Type="nvarchar(max)" />
+          <Property Name="gst" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="reservations">
+          <Key>
+            <PropertyRef Name="table_no" />
+          </Key>
+          <Property Name="table_no" Type="int" Nullable="false" />
+          <Property Name="status" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="persons" Type="int" Nullable="false" />
+          <Property Name="incoming_time" Type="datetime" Nullable="false" />
+          <Property Name="outgoing_time" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="table_name" Type="varchar(max)" Nullable="false" />
+          <Property Name="table_seats" Type="int" />
+        </EntityType>
+        <EntityType Name="tcp_settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Port" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Path" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_info">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar(max)" Nullable="false" />
+          <Property Name="user_name" Type="varchar(max)" Nullable="false" />
+          <Property Name="type" Type="bit" Nullable="false" />
+          <Property Name="password" Type="varchar(max)" Nullable="false" />
+          <Property Name="ph_no" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="closing_view">
+          <Key>
+            <PropertyRef Name="bill_id" />
+            <PropertyRef Name="bill_code" />
+            <PropertyRef Name="bill_date" />
+            <PropertyRef Name="total_bill" />
+            <PropertyRef Name="user_name" />
+          </Key>
+          <Property Name="bill_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bill_code" Type="varchar(max)" Nullable="false" />
+          <Property Name="bill_date" Type="smalldatetime" Nullable="false" />
+          <Property Name="total_bill" Type="float" Nullable="false" />
+          <Property Name="user_name" Type="varchar(max)" Nullable="false" />
+          <Property Name="table_no" Type="varchar(max)" />
+          <Property Name="type" Type="varchar(max)" />
+          <Property Name="timestamp" Type="datetime" />
+          <Property Name="customer_phone" Type="varchar(max)" />
+          <Property Name="payment_type" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="MarhabaDbModelStoreContainer">
+          <EntitySet Name="bill" EntityType="Self.bill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bill_item" EntityType="Self.bill_item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="closing" EntityType="Self.closing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="configurations" EntityType="Self.configurations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="item" EntityType="Self.item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pending_deliveries" EntityType="Self.pending_deliveries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pending_order" EntityType="Self.pending_order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pending_payment" EntityType="Self.pending_payment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="reservations" EntityType="Self.reservations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="table" EntityType="Self.table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tcp_settings" EntityType="Self.tcp_settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user_info" EntityType="Self.user_info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="closing_view" EntityType="Self.closing_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [closing_view].[bill_id] AS [bill_id], 
+    [closing_view].[bill_code] AS [bill_code], 
+    [closing_view].[bill_date] AS [bill_date], 
+    [closing_view].[total_bill] AS [total_bill], 
+    [closing_view].[user_name] AS [user_name], 
+    [closing_view].[table_no] AS [table_no], 
+    [closing_view].[type] AS [type], 
+    [closing_view].[timestamp] AS [timestamp], 
+    [closing_view].[customer_phone] AS [customer_phone], 
+    [closing_view].[payment_type] AS [payment_type]
+    FROM [dbo].[closing_view] AS [closing_view]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MarhabaDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MarhabaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="reservations" EntityType="MarhabaDbModel.reservation" />
+          <EntitySet Name="tables" EntityType="MarhabaDbModel.table" />
+          <EntitySet Name="customers" EntityType="MarhabaDbModel.customer" />
+          <EntitySet Name="items" EntityType="MarhabaDbModel.item" />
+          <EntitySet Name="user_info" EntityType="MarhabaDbModel.user_info" />
+          <EntitySet Name="pending_order" EntityType="MarhabaDbModel.pending_order" />
+          <EntitySet Name="pending_deliveries" EntityType="MarhabaDbModel.pending_deliveries" />
+          <EntitySet Name="bill_item" EntityType="MarhabaDbModel.bill_item" />
+          <EntitySet Name="closings" EntityType="MarhabaDbModel.closing" />
+          <EntitySet Name="closing_view" EntityType="MarhabaDbModel.closing_view" />
+          <EntitySet Name="pending_payment" EntityType="MarhabaDbModel.pending_payment" />
+          <EntitySet Name="configurations" EntityType="MarhabaDbModel.configuration" />
+          <EntitySet Name="bills" EntityType="MarhabaDbModel.bill" />
+          <EntitySet Name="tcp_settings" EntityType="MarhabaDbModel.tcp_settings" />
+        </EntityContainer>
+        <EntityType Name="reservation">
+          <Key>
+            <PropertyRef Name="table_no" />
+          </Key>
+          <Property Name="table_no" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="persons" Type="Int32" Nullable="false" />
+          <Property Name="incoming_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="outgoing_time" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="table_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="table_seats" Type="Int32" />
+        </EntityType>
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="item">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="item_id" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="item_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="item_price" Type="Double" Nullable="false" />
+          <Property Name="item_qty" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="item_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="user_info">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="user_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="Boolean" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ph_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pending_order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="item_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="qty" Type="Double" Nullable="false" />
+          <Property Name="item_total" Type="Double" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="table_number" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pending_deliveries">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="item_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="qty" Type="Double" Nullable="false" />
+          <Property Name="item_total" Type="Double" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="phone_number" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="order_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="bill_item">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bill_id" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="item_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="item_qty" Type="Double" Nullable="false" />
+          <Property Name="total_bill" Type="Double" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="closing">
+          <Key>
+            <PropertyRef Name="bill_id" />
+          </Key>
+          <Property Name="bill_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bill_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="bill_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="total_bill" Type="Double" Nullable="false" />
+          <Property Name="user_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="table_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="timestamp" Type="DateTime" Precision="3" />
+          <Property Name="customer_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="payment_type" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="closing_view">
+          <Key>
+            <PropertyRef Name="bill_id" />
+            <PropertyRef Name="bill_code" />
+            <PropertyRef Name="bill_date" />
+            <PropertyRef Name="total_bill" />
+            <PropertyRef Name="user_name" />
+          </Key>
+          <Property Name="bill_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bill_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="bill_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="total_bill" Type="Double" Nullable="false" />
+          <Property Name="user_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="table_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="timestamp" Type="DateTime" Precision="3" />
+          <Property Name="customer_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="payment_type" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="pending_payment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tables" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="total_bill" Type="Double" Nullable="false" />
+          <Property Name="bill_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="gst" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="configuration">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="gst" Type="Double" />
+          <Property Name="last_id_synced" Type="Int32" />
+          <Property Name="ntn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="branchCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="bill">
+          <Key>
+            <PropertyRef Name="bill_id" />
+          </Key>
+          <Property Name="bill_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bill_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="bill_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="total_bill" Type="Double" Nullable="false" />
+          <Property Name="user_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="table_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="timestamp" Type="DateTime" Precision="3" />
+          <Property Name="customer_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="payment_type" Type="Boolean" />
+          <Property Name="payed" Type="Boolean" />
+          <Property Name="totalWithoutGST" Type="Double" />
+        </EntityType>
+        <EntityType Name="tcp_settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IPAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Port" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Path" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MarhabaDbModelStoreContainer" CdmEntityContainer="MarhabaEntities">
+          <EntitySetMapping Name="reservations">
+            <EntityTypeMapping TypeName="MarhabaDbModel.reservation">
+              <MappingFragment StoreEntitySet="reservations">
+                <ScalarProperty Name="outgoing_time" ColumnName="outgoing_time" />
+                <ScalarProperty Name="incoming_time" ColumnName="incoming_time" />
+                <ScalarProperty Name="persons" ColumnName="persons" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="table_no" ColumnName="table_no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tables">
+            <EntityTypeMapping TypeName="MarhabaDbModel.table">
+              <MappingFragment StoreEntitySet="table">
+                <ScalarProperty Name="table_seats" ColumnName="table_seats" />
+                <ScalarProperty Name="table_name" ColumnName="table_name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customers">
+            <EntityTypeMapping TypeName="MarhabaDbModel.customer">
+              <MappingFragment StoreEntitySet="customers">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="items">
+            <EntityTypeMapping TypeName="MarhabaDbModel.item">
+              <MappingFragment StoreEntitySet="item">
+                <ScalarProperty Name="item_type" ColumnName="item_type" />
+                <ScalarProperty Name="item_qty" ColumnName="item_qty" />
+                <ScalarProperty Name="item_price" ColumnName="item_price" />
+                <ScalarProperty Name="item_name" ColumnName="item_name" />
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_info">
+            <EntityTypeMapping TypeName="MarhabaDbModel.user_info">
+              <MappingFragment StoreEntitySet="user_info">
+                <ScalarProperty Name="ph_no" ColumnName="ph_no" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pending_order">
+            <EntityTypeMapping TypeName="MarhabaDbModel.pending_order">
+              <MappingFragment StoreEntitySet="pending_order">
+                <ScalarProperty Name="table_number" ColumnName="table_number" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="item_total" ColumnName="item_total" />
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="item_code" ColumnName="item_code" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pending_deliveries">
+            <EntityTypeMapping TypeName="MarhabaDbModel.pending_deliveries">
+              <MappingFragment StoreEntitySet="pending_deliveries">
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="item_total" ColumnName="item_total" />
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="item_code" ColumnName="item_code" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bill_item">
+            <EntityTypeMapping TypeName="MarhabaDbModel.bill_item">
+              <MappingFragment StoreEntitySet="bill_item">
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="total_bill" ColumnName="total_bill" />
+                <ScalarProperty Name="item_qty" ColumnName="item_qty" />
+                <ScalarProperty Name="item_code" ColumnName="item_code" />
+                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="closings">
+            <EntityTypeMapping TypeName="MarhabaDbModel.closing">
+              <MappingFragment StoreEntitySet="closing">
+                <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+                <ScalarProperty Name="customer_phone" ColumnName="customer_phone" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="table_no" ColumnName="table_no" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="total_bill" ColumnName="total_bill" />
+                <ScalarProperty Name="bill_date" ColumnName="bill_date" />
+                <ScalarProperty Name="bill_code" ColumnName="bill_code" />
+                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="closing_view">
+            <EntityTypeMapping TypeName="MarhabaDbModel.closing_view">
+              <MappingFragment StoreEntitySet="closing_view">
+                <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+                <ScalarProperty Name="customer_phone" ColumnName="customer_phone" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="table_no" ColumnName="table_no" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="total_bill" ColumnName="total_bill" />
+                <ScalarProperty Name="bill_date" ColumnName="bill_date" />
+                <ScalarProperty Name="bill_code" ColumnName="bill_code" />
+                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pending_payment">
+            <EntityTypeMapping TypeName="MarhabaDbModel.pending_payment">
+              <MappingFragment StoreEntitySet="pending_payment">
+                <ScalarProperty Name="gst" ColumnName="gst" />
+                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+                <ScalarProperty Name="total_bill" ColumnName="total_bill" />
+                <ScalarProperty Name="tables" ColumnName="tables" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="configurations">
+            <EntityTypeMapping TypeName="MarhabaDbModel.configuration">
+              <MappingFragment StoreEntitySet="configurations">
+                <ScalarProperty Name="branchCode" ColumnName="branchCode" />
+                <ScalarProperty Name="ntn" ColumnName="ntn" />
+                <ScalarProperty Name="last_id_synced" ColumnName="last_id_synced" />
+                <ScalarProperty Name="gst" ColumnName="gst" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bills">
+            <EntityTypeMapping TypeName="MarhabaDbModel.bill">
+              <MappingFragment StoreEntitySet="bill">
+                <ScalarProperty Name="totalWithoutGST" ColumnName="totalWithoutGST" />
+                <ScalarProperty Name="payed" ColumnName="payed" />
+                <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+                <ScalarProperty Name="customer_phone" ColumnName="customer_phone" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="table_no" ColumnName="table_no" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="total_bill" ColumnName="total_bill" />
+                <ScalarProperty Name="bill_date" ColumnName="bill_date" />
+                <ScalarProperty Name="bill_code" ColumnName="bill_code" />
+                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tcp_settings">
+            <EntityTypeMapping TypeName="MarhabaDbModel.tcp_settings">
+              <MappingFragment StoreEntitySet="tcp_settings">
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="6e29ff36ebcc4347b0e377c4566f16f0" Name="Diagram1">
+        <EntityTypeShape EntityType="MarhabaDbModel.reservation" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.table" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.customer" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.item" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.user_info" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.pending_order" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.pending_deliveries" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.bill_item" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.closing" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.closing_view" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.pending_payment" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.configuration" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.bill" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarhabaDbModel.tcp_settings" Width="1.5" PointX="9.375" PointY="8.75" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
