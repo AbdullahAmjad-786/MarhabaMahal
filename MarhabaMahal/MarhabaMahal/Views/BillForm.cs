@@ -259,30 +259,40 @@ namespace MarhabaMahal.Views
                         string oneBillLine = i.ToString().PadRight(3);
                         oneBillLine += itn + qty + uprice + totalprice;
                         graphics.DrawString(oneBillLine, font, new SolidBrush(Color.Black), startX, startY + offset);
+                        offset = offset + (int)font.GetHeight();
                     }
                 }
                 else
                 {
                     bill_item billItem = billArray[loop];
                     string itemName = customerBills.getName(billItem.item_code);
-                    if (itemName.Length >= 17)
+                    string itemName_half = "";
+                    int name_length = itemName.Length;
+                    if (name_length >= 17)
                     {
+                        int rem_length = itemName.Length - 15;
+                        itemName_half = itemName.Substring(15, rem_length);
                         itemName = itemName.Substring(0, 15);
-
                     }
 
                     itemName = itemName.PadRight(20);
-                    string qty = billItem.item_qty.ToString();
+                    string qty = billItem.item_qty.ToString() + ".00";
                     qty = qty.PadRight(5);
                     string uprice = customerBills.getPrice(billItem.item_code).ToString();
                     uprice = uprice.PadRight(5);
-                    ;
                     string totalprice = billItem.total_bill.ToString();
                     string oneBillLine = i.ToString().PadRight(3);
                     oneBillLine += itemName + qty + uprice + totalprice;
                     graphics.DrawString(oneBillLine, font, new SolidBrush(Color.Black), startX, startY + offset);
+                    offset = offset + (int)font.GetHeight();
+                    if (name_length >= 17)
+                    {
+                        //itemName_half = itemName_half.PadRight(23);
+                        graphics.DrawString(itemName_half, font, new SolidBrush(Color.Black), startX + 20, startY + offset);
+                        offset = offset + (int)font.GetHeight();
+                    }
+                    
                 }
-                offset = offset + (int)font.GetHeight();
                 i++;
                 lineCount++;
                 if (lineCount >= 33)
@@ -317,17 +327,17 @@ namespace MarhabaMahal.Views
 
             if (ServiceCharge)
             {
-                graphics.DrawString("Total".PadRight(top.Length - 15) + String.Format("Rs. {0}", total + serviceV),
+                graphics.DrawString("Total".PadRight(top.Length - 11) + String.Format("Rs. {0:0.00}", total + serviceV),
                     font, new SolidBrush(Color.Black), startX, startY + offset);
             }
             else
-                graphics.DrawString("Total".PadRight(top.Length - 15) + String.Format("Rs. {0}", total),
+                graphics.DrawString("Total".PadRight(top.Length - 11) + String.Format("Rs. {0:0.00}", total),
                     font, new SolidBrush(Color.Black), startX, startY + offset);
 
             offset = offset + 20;
             if (gst)
             {
-                graphics.DrawString("GST".PadRight(top.Length - 15) + String.Format("Rs. {0}", gstV),
+                graphics.DrawString("GST".PadRight(top.Length - 11) + String.Format("Rs. {0:0.00}", gstV),
                     font, new SolidBrush(Color.Black), startX, startY + offset);
 
                 offset += 20;
@@ -341,7 +351,7 @@ namespace MarhabaMahal.Views
             }*/
             if (Discount)
             {
-                graphics.DrawString("Discount".PadRight(top.Length - 15) + String.Format("Rs. {0}", discV),
+                graphics.DrawString("Discount".PadRight(top.Length - 11) + String.Format("Rs. {0:0.00}", discV),
                     font, new SolidBrush(Color.Black), startX, startY + offset);
 
                 offset += 20;
@@ -362,7 +372,7 @@ namespace MarhabaMahal.Views
                 roundupbyten(grandTotal);
             }*/
 
-                graphics.DrawString("Total to pay".PadRight(top.Length - 15) + String.Format("Rs. {0}",
+                graphics.DrawString("Total to pay".PadRight(top.Length - 11) + String.Format("Rs. {0:0.00}",
                     grandTotal),
                     new Font("Courier New", 8, FontStyle.Bold),
                     new SolidBrush(Color.Black), startX, startY + offset);
@@ -383,9 +393,6 @@ namespace MarhabaMahal.Views
             graphics.DrawString(line,
                 font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 20;
-            graphics.DrawString("Developed By: SyntaX",
-                font, new SolidBrush(Color.Black), startX+50, startY + offset);
-            offset += 20;
             graphics.DrawString("",
                 font, new SolidBrush(Color.Black), startX + 30, startY + offset);
             e.HasMorePages = false;
@@ -400,6 +407,8 @@ namespace MarhabaMahal.Views
             int remainder = ii % 10;
             if (remainder == 0)
                 return ii;
+            else if (remainder > 5)
+                return ii + (10 - remainder);
             else
                 return ii - remainder;
 

@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VkZBgDLIKcvwTuMGMSfSurkbfqWOMzDEgiqYYmjyufc=</dsig:DigestValue>
+        <dsig:DigestValue>FXqCBXxkJ/vBdCZNAiE33UxicgGlhjEgAnb3CQibFEU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wMICFf1qF8vasH7cMMMXcMR+Mu31UOyJ4QDsn8GwOSw=</dsig:DigestValue>
+        <dsig:DigestValue>2SWSHGbOPkZ7TCWqb/P8aqkDP7FXBG51hZEn3AjkDmU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -327,13 +327,13 @@
       <dsig:DigestValue>j/TkbSJDpMFSfq9gs5CggattcPv8g6fXSd6lVWtuaO0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="MarhabaMahal.exe.config" size="1746">
+  <file name="MarhabaMahal.exe.config" size="1762">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>gWNzr/D74FXrhiY71NpO/m4YjaMJkDRTWf5UrAfSObA=</dsig:DigestValue>
+      <dsig:DigestValue>V+ACI3KlIkPIgGhOkjjytwkVd2gdqxVnhoCbNA2r4mc=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

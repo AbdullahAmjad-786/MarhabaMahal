@@ -54,3 +54,14 @@ D:\Work\Marhaba Mahal\MarhabaMahal\MarhabaDatabase\obj\Debug\MarhabaDatabase.csp
 D:\Work\Marhaba Mahal\MarhabaMahal\MarhabaDatabase\obj\Debug\MarhabaDatabase.csproj.CopyComplete
 D:\Work\Marhaba Mahal\MarhabaMahal\MarhabaDatabase\obj\Debug\MarhabaDatabase.dll
 D:\Work\Marhaba Mahal\MarhabaMahal\MarhabaDatabase\obj\Debug\MarhabaDatabase.pdb
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\bin\Debug\MarhabaDatabase.dll.config
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\bin\Debug\MarhabaDatabase.dll
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\bin\Debug\MarhabaDatabase.pdb
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\bin\Debug\EntityFramework.dll
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\bin\Debug\EntityFramework.xml
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\obj\Debug\MarhabaDatabase.csprojAssemblyReference.cache
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\obj\Debug\MarhabaDatabase.csproj.CopyComplete
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\obj\Debug\MarhabaDatabase.dll
+D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\obj\Debug\MarhabaDatabase.pdb

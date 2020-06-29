@@ -834,10 +834,11 @@ namespace MarhabaMahal.Views
             int remainder = ii % 10;
             if (remainder == 0)
                 return ii;
+            else if (remainder > 5)
+                return ii + (10 - remainder);
             else
                 return ii - remainder;
             //ii += (remainder < 10 / 2) ? -remainder : (10 - remainder);
-
         }
 
         public void updateOrder()
