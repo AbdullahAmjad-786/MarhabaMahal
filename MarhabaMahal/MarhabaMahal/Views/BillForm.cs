@@ -276,7 +276,8 @@ namespace MarhabaMahal.Views
                     }
 
                     itemName = itemName.PadRight(20);
-                    string qty = billItem.item_qty.ToString() + ".00";
+                    //string qty = billItem.item_qty.ToString();
+                    string qty = String.Format("{0:0.00}", billItem.item_qty);
                     qty = qty.PadRight(5);
                     string uprice = customerBills.getPrice(billItem.item_code).ToString();
                     uprice = uprice.PadRight(5);
