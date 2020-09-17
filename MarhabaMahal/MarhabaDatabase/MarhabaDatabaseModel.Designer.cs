@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Work\Marhaba Mahal\MarhabaMahal\MarhabaDatabase\MarhabaDatabaseModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Work\Marhaba Mahal_V1.0\MarhabaMahal\MarhabaMahal\MarhabaDatabase\MarhabaDatabaseModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -100,6 +100,9 @@
     <Compile Include="reservation.cs">
       <DependentUpon>MarhabaDatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>MarhabaDatabaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="table.cs">
       <DependentUpon>MarhabaDatabaseModel.tt</DependentUpon>
     </Compile>

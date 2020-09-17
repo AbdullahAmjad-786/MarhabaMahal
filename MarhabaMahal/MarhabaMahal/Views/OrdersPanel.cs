@@ -527,7 +527,78 @@ namespace MarhabaMahal.Views
                 //row.Dispose();
             }
             txtPendingTotal.Text = total.ToString();
+            var opt = MessageBox.Show("Are you Paying through Card?", "Payment Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(opt.ToString() == "Yes")
+            {
+                txtGST.Text = "5";
+                txtService.Text = "5";
+                checkBoxService.Checked = true;
+               
+                string billId = "";
+                if (!chkId.Checked)
+                {
+                    billId += username[0];
+                    // tempid = table;
+                    billId += DateTime.Now.ToString("yyyyMMddHHmmss");
+                }
+                else
+                {
+                    billId = txtNewId.Text.ToString();
+                }
+                
+                for (int i = 0; i < dataGridViewPendingOrders.RowCount - 1; i++)
+                {
+                    string itemCode = dataGridViewPendingOrders.Rows[i].Cells[itemCodePendinding.Index].Value.ToString();
+                    double qty = double.Parse(dataGridViewPendingOrders.Rows[i].Cells[quantityPending.Index].Value
+                        .ToString());
+                    total = double.Parse(dataGridViewPendingOrders.Rows[i].Cells[itemTotalPending.Index].Value
+                        .ToString());
+                    if (table != tempid)
+                    {
+                        orders.insertToBillItems(billId, itemCode, qty, total, "order");
+                        orders.removePendingOrder(pendingOrderIds[i]);
+                    }
+                }
 
+                double grandTotal = Double.Parse(txtGrandTotal.Text);
+                double totalWithoutGST = double.Parse(txtPendingTotal.Text);
+                int gst_percent = Convert.ToInt32(txtGST.Text);
+                if (table != tempid)
+                {
+                    orders.insertBill(billId, grandTotal, totalWithoutGST, username, table, "order", "", txtGST.Text + "%");
+                    //orders.addPendingPayment(table, grandTotal, billId, gst_percent);
+                    orders.insertClosing(billId, grandTotal, username, table, "order", "");
+                }
+                dataGridViewPendingOrders.Rows.Clear();
+                setTables();
+                BillForm billForm;
+                bool isNameNumber = false;
+                if (chkNameNmbr.Checked)
+                {
+                    isNameNumber = true;
+                }
+                if (!admin)
+                    billForm = new BillForm(grandTotal, table, totalWithoutGST, true, billId, username, false, true, null, isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text));
+                else
+                    billForm = new BillForm(grandTotal, table, totalWithoutGST, chkGST.Checked, billId, username, false, true, null, isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text));
+                
+                if (isNameNumber)
+                    billForm.Show();
+                else
+                    billForm.PrintRecp();
+                
+                refreshPendingPayments();
+                if (listTables.Items.Contains(table))
+                    listTables.Items.Remove(table);
+                refreshClosingBillList();
+                tempid = table;
+                if (chkId.Checked)
+                {
+                    chkId.Checked = false;
+                    txtNewId.Text = "";
+                    txtNewId.Enabled = false;
+                }
+            }
         }
 
         private void dataGridViewPendingOrders_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -942,7 +1013,7 @@ namespace MarhabaMahal.Views
                 int gst_percent = Convert.ToInt32(txtGST.Text);
                 if (table != tempid)
                 {
-                    orders.insertBill(billId, grandTotal, totalWithoutGST, username, table, "order", "");
+                    orders.insertBill(billId, grandTotal, totalWithoutGST, username, table, "order", "", txtGST.Text+"%");
                     orders.addPendingPayment(table, grandTotal, billId, gst_percent);
                     orders.insertClosing(billId, grandTotal, username, table, "order", "");
                 }

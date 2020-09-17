@@ -205,7 +205,7 @@ namespace MarhabaMahal.BLClasses
         }
 
         public void insertBill(string billId, double total, double totalWithoutGST ,string username, 
-            string table,string type,string phone)
+            string table,string type,string phone, string gst)
         {
             MarhabaEntities entities = new MarhabaEntities();
             MarhabaDatabase.bill dbBill = new bill();
@@ -217,6 +217,7 @@ namespace MarhabaMahal.BLClasses
             dbBill.payment_type = false;
             dbBill.type = type;
             dbBill.payed = false;
+            dbBill.gst_percent = gst;
             dbBill.totalWithoutGST = totalWithoutGST;
             DateTime time = DateTime.Now;              // Use current time
             string format = "dd-MM-yyyy";

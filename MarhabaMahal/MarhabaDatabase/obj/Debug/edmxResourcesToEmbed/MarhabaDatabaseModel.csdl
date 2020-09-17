@@ -15,6 +15,7 @@
     <EntitySet Name="configurations" EntityType="MarhabaDbModel.configuration" />
     <EntitySet Name="bills" EntityType="MarhabaDbModel.bill" />
     <EntitySet Name="tcp_settings" EntityType="MarhabaDbModel.tcp_settings" />
+    <EntitySet Name="sysdiagrams" EntityType="MarhabaDbModel.sysdiagram" />
   </EntityContainer>
   <EntityType Name="reservation">
     <Key>
@@ -172,6 +173,7 @@
     <Property Name="payment_type" Type="Boolean" />
     <Property Name="payed" Type="Boolean" />
     <Property Name="totalWithoutGST" Type="Double" />
+    <Property Name="gst_percent" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tcp_settings">
     <Key>
@@ -181,5 +183,15 @@
     <Property Name="IPAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Port" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Path" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
 </Schema>

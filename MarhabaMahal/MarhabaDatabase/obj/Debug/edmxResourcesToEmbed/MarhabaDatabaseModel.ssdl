@@ -16,6 +16,7 @@
     <Property Name="payment_type" Type="bit" />
     <Property Name="payed" Type="bit" />
     <Property Name="totalWithoutGST" Type="float" />
+    <Property Name="gst_percent" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="bill_item">
     <Key>
@@ -119,6 +120,16 @@
     <Property Name="incoming_time" Type="datetime" Nullable="false" />
     <Property Name="outgoing_time" Type="datetime" Nullable="false" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="table">
     <Key>
       <PropertyRef Name="id" />
@@ -179,6 +190,7 @@ warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary 
     <EntitySet Name="pending_order" EntityType="Self.pending_order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="pending_payment" EntityType="Self.pending_payment" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="reservations" EntityType="Self.reservations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="table" EntityType="Self.table" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tcp_settings" EntityType="Self.tcp_settings" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="user_info" EntityType="Self.user_info" Schema="dbo" store:Type="Tables" />

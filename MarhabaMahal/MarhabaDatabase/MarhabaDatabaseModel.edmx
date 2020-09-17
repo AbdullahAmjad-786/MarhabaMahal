@@ -21,6 +21,7 @@
           <Property Name="payment_type" Type="bit" />
           <Property Name="payed" Type="bit" />
           <Property Name="totalWithoutGST" Type="float" />
+          <Property Name="gst_percent" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="bill_item">
           <Key>
@@ -124,6 +125,16 @@
           <Property Name="incoming_time" Type="datetime" Nullable="false" />
           <Property Name="outgoing_time" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="table">
           <Key>
             <PropertyRef Name="id" />
@@ -184,6 +195,7 @@ warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary 
           <EntitySet Name="pending_order" EntityType="Self.pending_order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pending_payment" EntityType="Self.pending_payment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="reservations" EntityType="Self.reservations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="table" EntityType="Self.table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tcp_settings" EntityType="Self.tcp_settings" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="user_info" EntityType="Self.user_info" Schema="dbo" store:Type="Tables" />
@@ -221,6 +233,7 @@ warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary 
           <EntitySet Name="configurations" EntityType="MarhabaDbModel.configuration" />
           <EntitySet Name="bills" EntityType="MarhabaDbModel.bill" />
           <EntitySet Name="tcp_settings" EntityType="MarhabaDbModel.tcp_settings" />
+          <EntitySet Name="sysdiagrams" EntityType="MarhabaDbModel.sysdiagram" />
         </EntityContainer>
         <EntityType Name="reservation">
           <Key>
@@ -378,6 +391,7 @@ warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary 
           <Property Name="payment_type" Type="Boolean" />
           <Property Name="payed" Type="Boolean" />
           <Property Name="totalWithoutGST" Type="Double" />
+          <Property Name="gst_percent" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tcp_settings">
           <Key>
@@ -387,6 +401,16 @@ warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary 
           <Property Name="IPAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Port" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Path" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -545,6 +569,7 @@ warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary 
           <EntitySetMapping Name="bills">
             <EntityTypeMapping TypeName="MarhabaDbModel.bill">
               <MappingFragment StoreEntitySet="bill">
+                <ScalarProperty Name="gst_percent" ColumnName="gst_percent" />
                 <ScalarProperty Name="totalWithoutGST" ColumnName="totalWithoutGST" />
                 <ScalarProperty Name="payed" ColumnName="payed" />
                 <ScalarProperty Name="payment_type" ColumnName="payment_type" />
@@ -567,6 +592,17 @@ warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary 
                 <ScalarProperty Name="Port" ColumnName="Port" />
                 <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="MarhabaDbModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -607,6 +643,7 @@ warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary 
         <EntityTypeShape EntityType="MarhabaDbModel.configuration" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MarhabaDbModel.bill" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MarhabaDbModel.tcp_settings" Width="1.5" PointX="9.375" PointY="8.75" />
+        <EntityTypeShape EntityType="MarhabaDbModel.sysdiagram" Width="1.5" PointX="0.75" PointY="10.75" />
       </Diagram>
     </Diagrams>
   </Designer>

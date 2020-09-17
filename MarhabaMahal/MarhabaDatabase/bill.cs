@@ -26,5 +26,6 @@ namespace MarhabaDatabase
         public Nullable<bool> payment_type { get; set; }
         public Nullable<bool> payed { get; set; }
         public Nullable<double> totalWithoutGST { get; set; }
+        public string gst_percent { get; set; }
     }
 }

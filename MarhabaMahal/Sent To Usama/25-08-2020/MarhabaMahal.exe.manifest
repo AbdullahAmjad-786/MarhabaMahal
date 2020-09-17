@@ -67,26 +67,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MarhabaDatabase.dll" size="51712">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MarhabaDatabase.dll" size="55296">
       <assemblyIdentity name="MarhabaDatabase" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VkZBgDLIKcvwTuMGMSfSurkbfqWOMzDEgiqYYmjyufc=</dsig:DigestValue>
+        <dsig:DigestValue>MFdsFDcaCcFBJ6JIFhd/D7m25eQBJNeqylpk7FXWZyU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MarhabaMahal.exe" size="1861120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MarhabaMahal.exe" size="1867264">
       <assemblyIdentity name="MarhabaMahal" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nSLa10FXntcLriKPMwWkbnJIC+gTEIdWrQkBSrLFK3M=</dsig:DigestValue>
+        <dsig:DigestValue>3Mi9bW74PhtzUJELq5eYLKlLWJ8e6tw6MlxV5Nlu1s4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -327,13 +327,13 @@
       <dsig:DigestValue>j/TkbSJDpMFSfq9gs5CggattcPv8g6fXSd6lVWtuaO0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="MarhabaMahal.exe.config" size="1752">
+  <file name="MarhabaMahal.exe.config" size="1762">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>UmOcLT8SgpZTT9QPtotf5wYISwFI8qydzCs/evrV5Cs=</dsig:DigestValue>
+      <dsig:DigestValue>V+ACI3KlIkPIgGhOkjjytwkVd2gdqxVnhoCbNA2r4mc=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

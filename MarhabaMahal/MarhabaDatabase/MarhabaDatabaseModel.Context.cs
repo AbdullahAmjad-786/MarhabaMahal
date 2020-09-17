@@ -39,5 +39,6 @@ namespace MarhabaDatabase
         public virtual DbSet<configuration> configurations { get; set; }
         public virtual DbSet<bill> bills { get; set; }
         public virtual DbSet<tcp_settings> tcp_settings { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

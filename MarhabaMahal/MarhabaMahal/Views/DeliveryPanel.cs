@@ -676,7 +676,7 @@ namespace MarhabaMahal.Views
             double grandTotal = Double.Parse(txtGrandTotal.Text);
             //double cashRcvd = double.Parse(txtAmountRcvd.Text);
             double totalWithoutGST = double.Parse(txtPendingTotal.Text);
-            orders.insertBill(orderId, grandTotal,totalWithoutGST, username, "", "delivery",item.phone);
+            orders.insertBill(orderId, grandTotal,totalWithoutGST, username, "", "delivery",item.phone, txtGST.Text+"%");
             orders.insertClosing(orderId, grandTotal, username, "", "delivery", item.phone);
             Customer customer=new Customer();
             customer.addCustomer(item);
