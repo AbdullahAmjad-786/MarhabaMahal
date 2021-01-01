@@ -27,5 +27,7 @@ namespace MarhabaDatabase
         public Nullable<bool> payed { get; set; }
         public Nullable<double> totalWithoutGST { get; set; }
         public string gst_percent { get; set; }
+        public string FiscalInvoiceNumber { get; set; }
+        public string QR_Code { get; set; }
     }
 }

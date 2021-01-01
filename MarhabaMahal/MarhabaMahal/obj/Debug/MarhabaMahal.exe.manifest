@@ -67,26 +67,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MarhabaDatabase.dll" size="55296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MarhabaDatabase.dll" size="55808">
       <assemblyIdentity name="MarhabaDatabase" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MFdsFDcaCcFBJ6JIFhd/D7m25eQBJNeqylpk7FXWZyU=</dsig:DigestValue>
+        <dsig:DigestValue>2DTZDz8wJdb+lhD8TUqQ3M+8sfxPzq0yB0p36AW1SrY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MarhabaMahal.exe" size="1867264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MarhabaMahal.exe" size="1871360">
       <assemblyIdentity name="MarhabaMahal" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/qoDRBfGf9aM4b73tDeyypUoiCu05dTcMHHgSYZb1Yw=</dsig:DigestValue>
+        <dsig:DigestValue>JaCTlt66QKdkMZVZru2yaivlhy0OZDIZ0YU80udCKd0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

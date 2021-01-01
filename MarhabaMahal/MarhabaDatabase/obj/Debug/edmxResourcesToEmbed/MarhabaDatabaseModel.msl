@@ -152,6 +152,8 @@
     <EntitySetMapping Name="bills">
       <EntityTypeMapping TypeName="MarhabaDbModel.bill">
         <MappingFragment StoreEntitySet="bill">
+          <ScalarProperty Name="QR_Code" ColumnName="QR_Code" />
+          <ScalarProperty Name="FiscalInvoiceNumber" ColumnName="FiscalInvoiceNumber" />
           <ScalarProperty Name="gst_percent" ColumnName="gst_percent" />
           <ScalarProperty Name="totalWithoutGST" ColumnName="totalWithoutGST" />
           <ScalarProperty Name="payed" ColumnName="payed" />

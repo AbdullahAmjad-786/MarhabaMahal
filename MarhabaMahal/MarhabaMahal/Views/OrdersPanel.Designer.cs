@@ -433,6 +433,7 @@
             this.chkGST.AutoSize = true;
             this.chkGST.Checked = true;
             this.chkGST.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkGST.Enabled = false;
             this.chkGST.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkGST.ForeColor = System.Drawing.Color.White;
             this.chkGST.Location = new System.Drawing.Point(361, 584);

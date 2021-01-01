@@ -22,6 +22,8 @@
           <Property Name="payed" Type="bit" />
           <Property Name="totalWithoutGST" Type="float" />
           <Property Name="gst_percent" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FiscalInvoiceNumber" Type="varchar" MaxLength="100" />
+          <Property Name="QR_Code" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="bill_item">
           <Key>
@@ -392,6 +394,8 @@ warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary 
           <Property Name="payed" Type="Boolean" />
           <Property Name="totalWithoutGST" Type="Double" />
           <Property Name="gst_percent" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FiscalInvoiceNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="QR_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tcp_settings">
           <Key>
@@ -569,6 +573,8 @@ warning 6002: The table/view 'Marhaba.dbo.closing_view' does not have a primary 
           <EntitySetMapping Name="bills">
             <EntityTypeMapping TypeName="MarhabaDbModel.bill">
               <MappingFragment StoreEntitySet="bill">
+                <ScalarProperty Name="QR_Code" ColumnName="QR_Code" />
+                <ScalarProperty Name="FiscalInvoiceNumber" ColumnName="FiscalInvoiceNumber" />
                 <ScalarProperty Name="gst_percent" ColumnName="gst_percent" />
                 <ScalarProperty Name="totalWithoutGST" ColumnName="totalWithoutGST" />
                 <ScalarProperty Name="payed" ColumnName="payed" />

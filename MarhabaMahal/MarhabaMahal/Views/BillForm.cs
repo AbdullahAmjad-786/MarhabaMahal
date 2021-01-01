@@ -41,9 +41,11 @@ namespace MarhabaMahal.Views
         private Sales sales;
         private bool isShowName = false;
         private int gst_percent;
+        private string InvoiceNumber;
+        private string qr_code;
         private string table { get; set; }
         public BillForm(double grandTotal,string table, double total, 
-            bool gst,string billId,string username,bool delivery,bool payed,customItem c,bool showNameNumber,bool serviceCharge,bool discount,string disc, int gst_percent)
+            bool gst,string billId,string username,bool delivery,bool payed,customItem c,bool showNameNumber,bool serviceCharge,bool discount,string disc, int gst_percent,string InvoiceNumber="NA",string qr_code = "NA")
         {
             this.grandTotal = grandTotal;
             //this.cashRcvd = cashRcvd;
@@ -61,6 +63,8 @@ namespace MarhabaMahal.Views
             this.delivery = delivery;
             isShowName = showNameNumber;
             this.gst_percent = gst_percent;
+            this.InvoiceNumber = InvoiceNumber;
+            this.qr_code = qr_code;
             this.customer = c;
             customerBills = new CustomerBills();
             billItems = customerBills.GetBillItems(this.billId);
@@ -219,7 +223,25 @@ namespace MarhabaMahal.Views
             {
                 graphics.DrawString("BILL ID:>" + billId,
                     font, new SolidBrush(Color.Black), startX, startY + offset);
-                offset = offset + (int)font.GetHeight();
+                //offset = offset + (int)font.GetHeight();
+                offset = offset + (int)subHeading.GetHeight();
+
+                if (this.payed)
+                {
+                    if (this.InvoiceNumber != "NA")
+                    {
+                        graphics.DrawString("Invoice #:>" + this.InvoiceNumber,
+                        font, new SolidBrush(Color.Black), startX, startY + offset);
+                        offset = offset + (int)subHeading.GetHeight();
+                    }
+
+                   /* if (this.qr_code != "NA")
+                    {
+                        graphics.DrawString("QR Code:>" + this.qr_code,
+                        font, new SolidBrush(Color.Black), startX, startY + offset);
+                        offset = offset + (int)font.GetHeight();
+                    } */
+                }
             }
             
             

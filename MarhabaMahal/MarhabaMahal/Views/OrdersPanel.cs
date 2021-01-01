@@ -563,10 +563,15 @@ namespace MarhabaMahal.Views
                 double grandTotal = Double.Parse(txtGrandTotal.Text);
                 double totalWithoutGST = double.Parse(txtPendingTotal.Text);
                 int gst_percent = Convert.ToInt32(txtGST.Text);
+               /* string InvDetail = GetFiscalInvoiceNumber(billId, totalWithoutGST, grandTotal, gst_percent);
+                string[] details = InvDetail.Split(',');
+                string[] InvNum = details[0].Split(':');
+                string[] Code = details[1].Split(':'); */
                 if (table != tempid)
                 {
                     orders.insertBill(billId, grandTotal, totalWithoutGST, username, table, "order", "", txtGST.Text + "%");
-                    //orders.addPendingPayment(table, grandTotal, billId, gst_percent);
+                    //orders.AddFiscalDetails(billId,InvNum[1].Trim('"'),Code[1].Trim('"'));
+                    orders.addPendingPayment(table, grandTotal, billId, gst_percent);
                     orders.insertClosing(billId, grandTotal, username, table, "order", "");
                 }
                 dataGridViewPendingOrders.Rows.Clear();
@@ -578,9 +583,9 @@ namespace MarhabaMahal.Views
                     isNameNumber = true;
                 }
                 if (!admin)
-                    billForm = new BillForm(grandTotal, table, totalWithoutGST, true, billId, username, false, true, null, isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text));
+                    billForm = new BillForm(grandTotal, table, totalWithoutGST, true, billId, username, false, false, null, isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text));
                 else
-                    billForm = new BillForm(grandTotal, table, totalWithoutGST, chkGST.Checked, billId, username, false, true, null, isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text));
+                    billForm = new BillForm(grandTotal, table, totalWithoutGST, chkGST.Checked, billId, username, false, false, null, isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text));
                 
                 if (isNameNumber)
                     billForm.Show();
@@ -951,6 +956,8 @@ namespace MarhabaMahal.Views
             }
             dataGridViewPendingOrders.Rows.Clear();
             bool payedStatus = orders.getBillPayedStatus(searchBillId);
+            string InvNumber = orders.getFiscalInvoiceNumber(searchBillId);
+            string QrCode = orders.getQRCode(searchBillId);
             refreshTables();
             bool isNameNumber = false;
             if (chkNameNmbr.Checked)
@@ -959,9 +966,9 @@ namespace MarhabaMahal.Views
             }
             BillForm billForm;
             if (!admin)
-                billForm = new BillForm(grandTotal, tbl, totalWithoutGST, true, searchBillId, username, false, payedStatus, null,isNameNumber,checkBoxService.Checked,chkDiscount.Checked,cmbDiscount.Text, Convert.ToInt32(txtGST.Text));
+                billForm = new BillForm(grandTotal, tbl, totalWithoutGST, true, searchBillId, username, false, payedStatus, null,isNameNumber,checkBoxService.Checked,chkDiscount.Checked,cmbDiscount.Text, Convert.ToInt32(txtGST.Text), InvNumber, QrCode);
             else
-                billForm = new BillForm(grandTotal, tbl, totalWithoutGST, chkGST.Checked, searchBillId, username, false, payedStatus, null,isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text));
+                billForm = new BillForm(grandTotal, tbl, totalWithoutGST, chkGST.Checked, searchBillId, username, false, payedStatus, null,isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text), InvNumber, QrCode);
 
             if (isNameNumber)
                 billForm.Show();
@@ -1166,23 +1173,28 @@ namespace MarhabaMahal.Views
             double grandTotal = orders.getGrandTotal(billId).Value;
             double totalWithoutGST = Double.Parse(txtPendingTotal.Text);
             int gst_percent = orders.getGstPercent(billId).Value;
-           // totalWithoutGST /= 100;
-           // totalWithoutGST = grandTotal - totalWithoutGST;
+            string InvDetail = GetFiscalInvoiceNumber(billId,totalWithoutGST,grandTotal,gst_percent);
+            string[] details = InvDetail.Split(',');
+            string[] InvNum = details[0].Split(':');
+            string[] Code = details[1].Split(':');
+            // totalWithoutGST /= 100;
+            // totalWithoutGST = grandTotal - totalWithoutGST;
             bool isNameNumber = false;
             if (chkNameNmbr.Checked)
             {
                 isNameNumber = true;
             }
             if (!admin)
-                billForm = new BillForm(grandTotal, table, totalWithoutGST, true, billId, username, false, true, null,isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, gst_percent);
+                billForm = new BillForm(grandTotal, table, totalWithoutGST, true, billId, username, false, true, null,isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, gst_percent, InvNum[1].Trim('"'), Code[1].Trim('"'));
             else
-                billForm = new BillForm(grandTotal, table, totalWithoutGST, chkGST.Checked, billId, username, false, true, null,isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, gst_percent);
+                billForm = new BillForm(grandTotal, table, totalWithoutGST, chkGST.Checked, billId, username, false, true, null,isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, gst_percent, InvNum[1].Trim('"'), Code[1].Trim('"'));
 
             if (isNameNumber)
                 billForm.Show();
             else
                 billForm.PrintRecp();
             orders.removePendingPayments(item.id);
+            orders.AddFiscalDetails(billId, InvNum[1].Trim('"'), Code[1].Trim('"'));
             refreshPendingPayments();
             setTables();
         }
@@ -1210,15 +1222,17 @@ namespace MarhabaMahal.Views
             totalWithoutGST /= 100;
             totalWithoutGST = grandTotal - totalWithoutGST;
             bool payedStatus = orders.getBillPayedStatus(billId);
+            string InvNumber = orders.getFiscalInvoiceNumber(billId);
+            string QrCode = orders.getQRCode(billId);
             bool isNameNumber = false;
             if (chkNameNmbr.Checked)
             {
                 isNameNumber = true;
             }
             if (!admin)
-                billForm = new BillForm(grandTotal, tble, totalWithoutGST, true, billId, username, false, payedStatus, null, isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text));
+                billForm = new BillForm(grandTotal, tble, totalWithoutGST, true, billId, username, false, payedStatus, null, isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text),InvNumber,QrCode);
             else
-                billForm = new BillForm(grandTotal, tble, totalWithoutGST, chkGST.Checked, billId, username, false, payedStatus, null,isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text));
+                billForm = new BillForm(grandTotal, tble, totalWithoutGST, chkGST.Checked, billId, username, false, payedStatus, null,isNameNumber, checkBoxService.Checked, chkDiscount.Checked, cmbDiscount.Text, Convert.ToInt32(txtGST.Text),InvNumber,QrCode);
 
             if (isNameNumber)
                 billForm.Show();
@@ -1578,6 +1592,55 @@ namespace MarhabaMahal.Views
         {
             if(IsServerOn)
                 listenServer(tcp);
+        }
+
+        string GetFiscalInvoiceNumber(string billId, double total, double grandTotal, int gst_percent)
+        {
+            string InvNum = "";
+            Invoice objInv = new Invoice();
+            objInv.InvoiceNumber = string.Empty;
+            objInv.POSID = 131537;                                                                    //compulsory
+            objInv.USIN = billId;                                                                //compulsory
+            objInv.DateTime = DateTime.Now;                                                           //compulsory
+            if(gst_percent == 5)                                                                 //compulsory
+                objInv.PaymentMode = 2;
+            else
+                objInv.PaymentMode = 1;
+            objInv.TotalSaleValue = total;                                                       //compulsory
+            objInv.TotalBillAmount = grandTotal;                                                 //compulsory
+            double tax = grandTotal * gst_percent;
+            tax = tax / 100;
+            objInv.TotalTaxCharged = tax;                                                             //compulsory
+            objInv.InvoiceType = 1;                                                                   //compulsory
+            objInv.Items = Items(billId, gst_percent);                                                                   //compulsory
+            InvNum = objInv.PrintInvoice(objInv);
+            return InvNum;
+        }
+
+        private List<InvoiceItems> Items(string billId, int gst_percent)
+        {
+            CustomerBills CB = new CustomerBills();
+            IQueryable<MarhabaDatabase.bill_item>  billItems = CB.GetBillItems(billId);
+            List<InvoiceItems> lst = new List<InvoiceItems>();
+            List<bill_item> bArray = billItems.ToList();
+            for (int i = 0; i < billItems.Count(); i++)
+            {
+                bill_item bItem = bArray[i];
+                InvoiceItems objItem = new InvoiceItems();
+                objItem.ItemCode = bItem.item_code;                                                       //compulsory
+                objItem.ItemName = CB.getName(bItem.item_code);                                           //compulsory
+                objItem.Quantity = Double.Parse(bItem.item_qty.ToString());                               //compulsory
+                objItem.TotalAmount = Double.Parse(bItem.total_bill.ToString());                          //compulsory
+                objItem.SaleValue = Double.Parse(CB.getPrice(bItem.item_code).ToString());                //compulsory
+                objItem.TaxRate = gst_percent;                                                       //compulsory
+                double tax = bItem.total_bill * gst_percent;
+                tax = tax / 100;
+                objItem.TaxCharged = tax;                             //compulsory
+                objItem.PCTCode = "00000000";                                                             //compulsory
+                objItem.InvoiceType = 1;                                                                  //compulsory
+                lst.Add(objItem);
+            }
+            return lst;
         }
     }
 }

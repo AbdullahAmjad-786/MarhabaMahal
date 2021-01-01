@@ -17,6 +17,8 @@
     <Property Name="payed" Type="bit" />
     <Property Name="totalWithoutGST" Type="float" />
     <Property Name="gst_percent" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FiscalInvoiceNumber" Type="varchar" MaxLength="100" />
+    <Property Name="QR_Code" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="bill_item">
     <Key>

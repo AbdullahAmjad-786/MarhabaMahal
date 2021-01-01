@@ -423,6 +423,20 @@ namespace MarhabaMahal.BLClasses
             entities.Dispose();
         }
 
+        public void AddFiscalDetails(string billCode, string fiscalInvoiceNumber, string qr_code)
+        {
+            MarhabaEntities entities = new MarhabaEntities();
+            var bill = entities.bills.FirstOrDefault(b => b.bill_code == billCode);
+            if (bill != null)
+            {
+                bill.FiscalInvoiceNumber = fiscalInvoiceNumber;
+                bill.QR_Code = qr_code;
+                entities.bills.AddOrUpdate(bill);
+                entities.SaveChanges();
+            }
+            entities.Dispose();
+        }
+
         public void updateClosing(string searchBillId, 
             double grandTotal, string s, string orderUpdated, string empty)
         {
@@ -568,6 +582,22 @@ namespace MarhabaMahal.BLClasses
                 return dbBill.payed.Value;
             else
                 return false;
+        }
+
+        public string getFiscalInvoiceNumber(string billId)
+        {
+            MarhabaEntities entities = new MarhabaEntities();
+            var dbBill = entities.bills.FirstOrDefault(b => b.bill_code == billId);
+            string InvNo = dbBill.FiscalInvoiceNumber;
+            return InvNo;
+        }
+
+        public string getQRCode(string billId)
+        {
+            MarhabaEntities entities = new MarhabaEntities();
+            var dbBill = entities.bills.FirstOrDefault(b => b.bill_code == billId);
+            string qr_code = dbBill.QR_Code;
+            return qr_code;
         }
 
         public void setNewId(string nid)

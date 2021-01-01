@@ -121,6 +121,8 @@
     <Compile Include="BLClasses\ConfigurationReader.cs" />
     <Compile Include="BLClasses\Customer.cs" />
     <Compile Include="BLClasses\CustomerBills.cs" />
+    <Compile Include="BLClasses\Invoice.cs" />
+    <Compile Include="BLClasses\InvoiceItems.cs" />
     <Compile Include="BLClasses\Orders.cs" />
     <Compile Include="BLClasses\Product.cs" />
     <Compile Include="BLClasses\Sales.cs" />
